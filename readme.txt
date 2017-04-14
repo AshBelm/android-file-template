@@ -1,0 +1,1 @@
+请将文件夹拷贝到android studio安装目录的plugins\android\lib\templates 下并重启studio

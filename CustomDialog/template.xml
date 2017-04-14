@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="Custom Dialog"
+    description="Creates a new Dialog that extends android.app.Dialog.">
+
+    <category value="UI Component" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <parameter
+        id="dialogClass"
+        name="Dialog Class"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="CustomDialog"
+        help="By convention, should end in 'Dialog'" />
+    <parameter
+        id="backgroundShape"
+        name="Round Rectangle Frame"
+        type="boolean"
+        default="true">
+    </parameter>
+
+    <globals file="globals.xml.ftl"/>
+    <execute file="recipe.xml.ftl"/>
+
+</template>
