@@ -4,7 +4,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_${dialog_class}"
     android:orientation="vertical"
-    android:padding="@dimen/${dialog_class}_frame_width">
+    <#if frame>
+    android:padding="@dimen/${dialog_class}_frame_width"
+    </#if>
+    >
 
     <TextView
         android:id="@+id/tv_${dialog_class}_title"

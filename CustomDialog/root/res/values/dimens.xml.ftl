@@ -1,6 +1,6 @@
 <resources>
     <dimen name="${dialog_class}_radius">4dp</dimen>
-    <dimen name="${dialog_class}_frame_width">1dp</dimen>
+    <dimen name="${dialog_class}_frame_width">2dp</dimen>
     <dimen name="${dialog_class}_divider">1dp</dimen>
     <dimen name="${dialog_class}_edge">8dp</dimen>
     <dimen name="${dialog_class}_text_major">18dp</dimen>

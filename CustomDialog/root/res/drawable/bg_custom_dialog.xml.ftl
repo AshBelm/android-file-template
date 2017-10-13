@@ -4,5 +4,7 @@
     <#if backgroundShape>
     <corners android:radius="@dimen/${dialog_class}_radius"/>
     </#if>
+    <#if frame>
     <stroke android:width="@dimen/${dialog_class}_frame_width" android:color="@color/${dialog_class}_line"/>
+    </#if>
 </shape>

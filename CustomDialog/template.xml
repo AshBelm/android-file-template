@@ -21,12 +21,37 @@
         constraints="class|unique|nonempty"
         default="CustomDialog"
         help="By convention, should end in 'Dialog'" />
+
+    <parameter
+        id="colorScheme"
+        name="Color Scheme"
+        type="enum"
+        default="light">
+        <option id="light" default="true">Light Scheme</option>
+        <option id="dark">Dark</option>
+    </parameter>
+
+
+    <parameter
+        id="frame"
+        name="Frame Stroke"
+        type="boolean"
+        default="false"/>
+
     <parameter
         id="backgroundShape"
         name="Round Rectangle Frame"
         type="boolean"
         default="true">
     </parameter>
+
+    <thumbs>
+        <thumb>dialog_light_round_frame</thumb>
+        <thumb colorScheme="light" backgroundShape="true">dialog_light_round_frame</thumb>
+        <thumb colorScheme="light" backgroundShape="false">dialog_light_frame</thumb>
+        <thumb colorScheme="dark" backgroundShape="true">dialog_dark_round_frame</thumb>
+        <thumb colorScheme="dark" backgroundShape="false">dialog_dark_frame</thumb>
+    </thumbs>
 
     <globals file="globals.xml.ftl"/>
     <execute file="recipe.xml.ftl"/>
