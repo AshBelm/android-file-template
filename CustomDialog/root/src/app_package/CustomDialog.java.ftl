@@ -15,6 +15,10 @@ import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
 
+<#if applicationPackage??>
+import ${applicationPackage}.R;
+</#if>
+
 public class ${dialogClass} extends Dialog {
     private DialogViewHolder mView;
     private boolean mButtonCancelable = true;
@@ -248,17 +252,17 @@ public class ${dialogClass} extends Dialog {
         private ViewGroup layout_btn;
 
         private void inflate(Context context) {
-            View view = LayoutInflater.from(context).inflate(R.layout.custom_dialog, null);
+            View view = LayoutInflater.from(context).inflate(R.layout.${dialog_class}, null);
             rootView = view;
-            tv_title = (TextView) view.findViewById(R.id.tv_custom_dialog_title);
-            tv_msg = (TextView) view.findViewById(R.id.tv_custom_dialog_msg);
-            layout_content = (FrameLayout) view.findViewById(R.id.layout_custom_dialog_content);
-            btn_positive = (Button) view.findViewById(R.id.btn_custom_dialog_positive);
-            btn_negative = (Button) view.findViewById(R.id.btn_custom_dialog_negative);
-            v_divider_bottom = view.findViewById(R.id.divider_custom_dialog_bottom);
-            v_divider_top = view.findViewById(R.id.divider_custom_dialog_top);
-            v_divider_btn = view.findViewById(R.id.divider_custom_dialog_btn);
-            layout_btn = (ViewGroup) view.findViewById(R.id.layout_custom_dialog_btn);
+            tv_title = (TextView) view.findViewById(R.id.tv_${dialog_class}_title);
+            tv_msg = (TextView) view.findViewById(R.id.tv_${dialog_class}_msg);
+            layout_content = (FrameLayout) view.findViewById(R.id.layout_${dialog_class}_content);
+            btn_positive = (Button) view.findViewById(R.id.btn_${dialog_class}_positive);
+            btn_negative = (Button) view.findViewById(R.id.btn_${dialog_class}_negative);
+            v_divider_bottom = view.findViewById(R.id.divider_${dialog_class}_bottom);
+            v_divider_top = view.findViewById(R.id.divider_${dialog_class}_top);
+            v_divider_btn = view.findViewById(R.id.divider_${dialog_class}_btn);
+            layout_btn = (ViewGroup) view.findViewById(R.id.layout_${dialog_class}_btn);
         }
     }
 
