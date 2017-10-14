@@ -27,7 +27,7 @@
         name="Color Scheme"
         type="enum"
         default="light">
-        <option id="light" default="true">Light Scheme</option>
+        <option id="light" default="true">Light</option>
         <option id="dark">Dark</option>
     </parameter>
 
@@ -45,15 +45,20 @@
         default="true">
     </parameter>
 
-    <thumbs>
-        <thumb>dialog_light_round_frame</thumb>
-        <thumb colorScheme="light" backgroundShape="true">dialog_light_round_frame</thumb>
-        <thumb colorScheme="light" backgroundShape="false">dialog_light_frame</thumb>
-        <thumb colorScheme="dark" backgroundShape="true">dialog_dark_round_frame</thumb>
-        <thumb colorScheme="dark" backgroundShape="false">dialog_dark_frame</thumb>
-    </thumbs>
-
     <globals file="globals.xml.ftl"/>
     <execute file="recipe.xml.ftl"/>
+
+
+    <thumbs>
+        <thumb>dialog_light_round_frame.png</thumb>
+        <thumb colorScheme="light">dialog_light.png</thumb>
+        <thumb colorScheme="light" backgroundShape="true">dialog_light_round.png</thumb>
+        <thumb colorScheme="light" frame="true">dialog_light_frame.png</thumb>
+        <thumb colorScheme="light" backgroundShape="true" frame="true">dialog_light_round_frame.png</thumb>
+        <thumb colorScheme="dark">dialog_dark.png</thumb>
+        <thumb colorScheme="dark" backgroundShape="true">dialog_dark_round.png</thumb>
+        <thumb colorScheme="dark" frame="true">dialog_dark_frame.png</thumb>
+        <thumb colorScheme="dark" backgroundShape="true" frame="true">dialog_dark_round_frame.png</thumb>
+    </thumbs>
 
 </template>
